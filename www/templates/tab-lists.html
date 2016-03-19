@@ -1,0 +1,45 @@
+<ion-view view-title="My Lists">
+  <ion-content>
+    <div class="links-bar">
+        <a class="selected">Favorites</a>
+        <a>To Do</a>
+        <a>Interests</a>
+        <a>Share</a>
+    </div>
+
+    <div class="side-padding">
+      <h3>Favorites <small>(Places)</small></h3>
+    </div>
+
+    <div class="places-list">
+    <ion-list>
+      <ion-item ng-repeat="place in places" href="#/tab/places/{{place.id}}">
+        <div class="img"><img ng-src="{{place.img}}"></div>
+        <strong>{{place.name}}</strong>
+        <div><rating-stars value="{{place.rating}}"></div>
+        <div class="tags-line">Top Tags: {{place.tagsLine}}</div>
+        <div class="icns">
+          <span class="icon ion-android-checkbox-outline"></span>
+          <span class="icon ion-android-star-outline"></span>
+        </div>
+      </ion-item>
+    </ion-list>
+    <div class="side-padding"><a class="link-more-small">View all</a></div>
+  </div>
+
+  <div class="interests-list">
+    <div class="side-padding">
+      <h3>Interests <small>(Tags)</small></h3>
+      <div class="tags-cloud">
+        <a class="item-tag" href="" ng-repeat="tag in tags">
+          {{tag.name}}
+        </a>
+      </div>
+      <a class="link-more-small">View all</a>
+    </div>
+  </div>
+
+
+
+  </ion-content>
+</ion-view>

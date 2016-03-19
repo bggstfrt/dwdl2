@@ -1,0 +1,15 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list>
+<!--
+      <a class="button button-icon icon ion-ios-person-outline"
+        href="https://api.instagram.com/oauth/authorize/?client_id={{config.instagramCliendID}}&redirect_uri={{config.serverHost}}/instgram-auth&response_type=code"></a>
+-->
+        <a class="button" href="/authorize-user">Login Instagram</a>
+
+      <ion-toggle  ng-model="settings.c" value="c">Online</ion-toggle>
+      <ion-toggle  ng-model="settings.a" value="a">Enable Notifications</ion-toggle>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

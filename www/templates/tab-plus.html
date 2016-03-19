@@ -1,0 +1,51 @@
+<ion-view view-title="Spotted">
+  <ion-content class="page-add-photo">
+    <div class="panel-added" ng-show="photoAdded">
+      <div class="section-preview">
+        <img src="img/fake-img.png" style="max-width: 100%;" ng-click="togglePhotoAdded()">
+
+        <div class="address-line">
+          <span class="l"><span class="icon ion-ios-location-outline"></span></span>
+          <span class="addr">{{geoData.addressLine}}</span>
+          <span class="r"><a href="#/tab/location" class="small-link">Change</a></span>
+        </div>
+
+      </div>
+      <div class="section-comment">
+        <label>Comment</label>
+        <input type="text" value="" >
+      </div>
+      <div class="section-tags side-padding">
+        <label>Suggested Tags</label>
+        <div class="tags-cloud">
+          <a class="item-tag big" ng-repeat="tag in tags">
+            {{tag.name}}
+          </a>
+        </div>
+        <a class="link-more-small">Add New</a>
+      </div>
+      <div class="section-rating side-padding">
+        <label>Rating</label> <big><rating-stars value="4.5"></big>
+      </div>
+    </div>
+
+    <div class="panel-not-added"  ng-show="!photoAdded">
+      <div class="btns">
+        <h4>Add photo</h4>
+
+        <button class="button button-small" ng-click="togglePhotoAdded()">
+          Take Photo
+        </button>
+        <button class="button button-small" ng-click="togglePhotoAdded()">
+          Select from Gallery
+        </button>
+      </div>
+      <div class="address-line">
+        <span class="l"><span class="icon ion-ios-location-outline"></span></span>
+        <span class="addr">{{geoData.addressLine}}</span>
+        <span class="r"><a href="#/tab/location" class="small-link">Change</a></span>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

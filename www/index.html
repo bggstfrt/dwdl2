@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/style.css?v=1" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+
+    <!-- your app's js -->
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyDjlgG-_S59IKZ8kslpBHeK13HdmT9MJpc"></script>
+    <script src="js/app.js?v=1"></script>
+    <script src="js/components.js?v=1"></script>
+    <script src="js/controllers.js?v=1"></script>
+    <script src="js/services.js?v=1"></script>
+  </head>
+  <body ng-app="starter">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+
+    <ion-side-menus>
+      <!-- Left menu -->
+      <ion-side-menu side="left">
+        <ion-list>
+          <ion-item menu-close href="#/tab/intro">
+            Before we begin...
+          </ion-item>
+          <ion-item menu-close href="#/tab/account">
+            Account Settings
+          </ion-item>
+        </ion-list>
+      </ion-side-menu>
+
+      <ion-side-menu-content drag-content="false">
+        <ion-nav-bar class="bar-stable">
+
+          <ion-nav-buttons side="left">
+           <!-- Toggle left side menu -->
+           <a menu-toggle="left" class="button button-icon icon ion-navicon"></a>
+          </ion-nav-buttons>
+
+            <ion-nav-buttons side="right">
+             <!-- Toggle left side menu -->
+             <a class="button button-icon icon ion-ios-person-outline" href="#/tab/account"></a>
+            </ion-nav-buttons>
+            <ion-nav-back-button></ion-nav-back-button>
+        </ion-nav-bar>
+
+
+        <ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+      </ion-side-menu-content>
+    </ion-side-menus>
+
+
+
+  </body>
+</html>

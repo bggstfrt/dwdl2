@@ -1,0 +1,23 @@
+<ion-view view-title="Location">
+  <ion-content class="page-set-location">
+    <div id="map" data-tap-disabled="true"></div>
+
+    <div class="address-line with-marker">
+      <span class="l"><span class="icon ion-ios-location-outline"></span></span>
+      <span class="addr">{{geoData.addressLine}}</span>
+      <span class="r"><a href="" class="small-link">Change</a></span>
+    </div>
+
+
+
+
+
+    <div class="hint">
+      Move map pin-point your location, or click<br>
+      'modify' above to manually enter your address.
+    </div>
+
+    <a class="button btn-set-my-location" ng-click="setCurrentLocation()">Set My Location</a>
+
+  </ion-content>
+</ion-view>
