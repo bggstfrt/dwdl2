@@ -1,8 +1,8 @@
-angular.module('starter.components', []).
+angular.module('starter.components', [])
 
   // Generates simple stars widget *****
   // Example <div rating-stars value="4.5"></div>
-  directive('ratingStars', function($compile) {
+  .directive('ratingStars', function($compile) {
     return {
     //  template: '<div class="rating-stars"></div>',
       link: function (scope, element, attrs) {

@@ -5,10 +5,15 @@
       <a class="button button-icon icon ion-ios-person-outline"
         href="https://api.instagram.com/oauth/authorize/?client_id={{config.instagramCliendID}}&redirect_uri={{config.serverHost}}/instgram-auth&response_type=code"></a>
 -->
-        <a class="button" href="/authorize-user">Login Instagram</a>
 
-      <ion-toggle  ng-model="settings.c" value="c">Online</ion-toggle>
-      <ion-toggle  ng-model="settings.a" value="a">Enable Notifications</ion-toggle>
+      <ion-toggle  ng-model="settings.a" value="a">Online</ion-toggle>
+      <ion-toggle  ng-model="settings.b" value="b">Enable Notifications</ion-toggle>
+      <ion-toggle  ng-model="settings.d" value="d">Locate using GPS</ion-toggle>
+      <ion-toggle  ng-model="settings.e" value="e">Hide Friends Markers</ion-toggle>
+      <ion-toggle  ng-model="settings.c" value="c">Dev mode</ion-toggle>
+
+
+      <a class="button button-block button-balanced icon-left ion-social-instagram-outline" href="#/authorize-user">Login Instagram</a>
 
     </ion-list>
   </ion-content>

@@ -101,7 +101,15 @@ angular.module('starter.controllers', [])
   $scope.tags = Data.tags.all().slice(0,6);
 })
 .controller('RingCtrl', function($scope, $rootScope) {
-//  $rootScope.$watch('prec', function(){ $scope.xxx = $rootScope.prec; });
+  $scope.items = [
+    {distance: 0.6, name: 'Quay', addr: 'George St & Argyle Street', category: 'Category', rating: 2 },
+    {distance: 0.85, name: 'Beppi\'s', addr: '21 Yurong St', category: 'Category', rating: 4 },
+    {distance: 1.2, name: 'Aqua Dining', addr: 'Paul St & Northcliff Street', category: 'Category', rating: 3.5 },
+    {distance: 1.6, name: 'Mr. Wong', addr: '3 Bridge Ln', category: 'Category', rating: 4},
+    {distance: 1.8, name: 'Love on Top', addr: '33 Bayswater Rd', category: 'Category', rating: 4 },
+  ];
+
+
 })
 .controller('SearchCtrl', function($scope, $rootScope, GeoTools, Data) {
     var _val = 5;
@@ -133,7 +141,7 @@ angular.module('starter.controllers', [])
 })
 .controller('IntroCtrl', function($scope) {})
 .controller('AccountCtrl', function($scope) {
-  $scope.settings = {"a": true, "b": true, "c": false};
+  $scope.settings = {"a": true, "b": true, "c": true};
 })
 
 
