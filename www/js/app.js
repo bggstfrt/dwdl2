@@ -1,12 +1,5 @@
 // Ionic Starter App
 
-if ('addEventListener' in document) {
-    document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-    }, false);
-}
-
-
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
@@ -15,6 +8,8 @@ if ('addEventListener' in document) {
 angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services', 'starter.components'])
 
 .run(function($ionicPlatform, $rootScope, GeoTools) {
+    FastClick.attach(document.body);
+
       var instagramCliendID = '4e86eabba7484ba28e4fe6af77d6ca68';
       $rootScope.config = {
         appVersion: '0.1',
