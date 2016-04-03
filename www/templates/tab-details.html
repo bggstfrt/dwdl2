@@ -1,9 +1,4 @@
-<!--
-  This template loads for the 'tab.friend-detail' state (app.js)
-  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
-  The FriendsCtrl pulls data from the Friends service (service.js)
-  The Friends service returns an array of friend data
--->
+
 <ion-view view-title="Place Details">
   <ion-content class="page-details">
     <div class="side-padding"><h3>{{place.name}}</h3></div>
@@ -16,7 +11,7 @@
       </div>
     </div>
     <div class="section-rating side-padding">
-      <label>Rating</label> <big><rating-stars value="{{place.rating}}"></big>
+      <label>Rating</label> <big><div rating-stars value="{{place.rating}}"></div></big>
     </div>
     <div class="side-padding">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae tempor ex. Vestibulum sollicitudin velit vitae massa condimentum tincidunt. Vivamus finibus placerat nisl. Donec egestas eget quam a viverra. Sed vitae quam elit. Mauris dignissim eros sed dignissim lobortis.</p>

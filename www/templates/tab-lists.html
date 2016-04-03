@@ -14,9 +14,9 @@
     <div class="places-list">
     <ion-list>
       <ion-item ng-repeat="place in places" href="#/tab/places/{{place.id}}">
-        <div class="img"><img ng-src="{{place.img}}"></div>
+        <div class="img"><img ng-src="{{place.img}}" /></div>
         <strong>{{place.name}}</strong>
-        <div><rating-stars value="{{place.rating}}"></div>
+        <div><div rating-stars value="{{place.rating}}"></div></div>
         <div class="tags-line">Top Tags: {{place.tagsLine}}</div>
         <div class="icns">
           <span class="icon ion-android-checkbox-outline"></span>
