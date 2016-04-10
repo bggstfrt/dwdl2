@@ -71,7 +71,7 @@ angular.module('starter.controllers', [])
 
   // fill tags line comma separated
   angular.forEach($scope.places, function(place, index){
-    console.log(place.tags);
+  //  console.log(place.tags);
     var res = [];
     angular.forEach(place.tags.slice(0,3), function(tagId){
       res.push(Data.tags.get(tagId).name);

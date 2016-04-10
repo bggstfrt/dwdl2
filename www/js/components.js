@@ -4,10 +4,10 @@ angular.module('starter.components', [])
   // Example <div rating-stars value="4.5"></div>
   .directive('ratingStars', function() {
     return {
-    //  template: '<div class="rating-stars"></div>',
+      scope: { value : '@' },
       link: function (scope, element, attrs) {
             var className,
-                rating = attrs['value'] || 0;
+                rating = scope.value;
             scope.stars = [];
             for(var i=1; i<=5; i++){
               className = 'ion-ios-star-outline'; // default value is empty star
